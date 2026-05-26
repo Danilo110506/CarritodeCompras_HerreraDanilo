@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone archivos - BlackPhone Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="barra-navegacion">
+        <div class="logo-tienda">BLACKPHONE STORE</div>
+        <div class="carrito-icono" id="abrir-carrito">
+            🛒 Carrito (<span id="contador-productos">0</span>)
+        </div>
+    </header>
+
+    <main class="seccion-catalogo">
+        <div class="ruta-texto">APPLE, IPHONE</div>
+        
+        <div class="grid-productos-oficial">
+            
+            <div class="tarjeta-tienda" onclick="verDetalle('iPhone 17 Pro Max', '1,731.00', 'https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/iphone-17-pro-17-pro-max-hero.png')">
+                <div class="bloque-blanco-img">
+                    <img src="https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/iphone-17-pro-17-pro-max-hero.png" alt="iPhone 17 Pro Max" class="imagen-telefono">
+                </div>
+                <div class="bloque-info-negro">
+                    <span class="sub-categoria">APPLE, IPHONE</span>
+                    <h3 class="nombre-producto">iPhone 17 Pro Max</h3>
+                    <p class="precio-producto">$1,731.00</p>
+                    <button class="btn-comprar-azul" onclick="agregarAlCarrito(event, 'iPhone 17 Pro Max', 1731.00, 'https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/iphone-17-pro-17-pro-max-hero.png')">Comprar</button>
+                </div>
+            </div>
+
+            <div class="tarjeta-tienda" onclick="verDetalle('iPhone 17 Pro', '1,675.00', 'https://static.k-tuin.com/media/catalog/product/cache/1/image/265x/0dc2d03fe217f8c83829496872af24a0/i/p/iphone-17-pro-max-plata-5.jpg')">
+                <div class="bloque-blanco-img">
+                    <img src="https://static.k-tuin.com/media/catalog/product/cache/1/image/265x/0dc2d03fe217f8c83829496872af24a0/i/p/iphone-17-pro-max-plata-5.jpg" alt="iPhone 17 Pro" class="imagen-telefono">
+                </div>
+                <div class="bloque-info-negro">
+                    <span class="sub-categoria">APPLE, IPHONE</span>
+                    <h3 class="nombre-producto">iPhone 17 Pro</h3>
+                    <p class="precio-producto">$1,675.00</p>
+                    <button class="btn-comprar-azul" onclick="agregarAlCarrito(event, 'iPhone 17 Pro', 1675.00, 'https://static.k-tuin.com/media/catalog/product/cache/1/image/265x/0dc2d03fe217f8c83829496872af24a0/i/p/iphone-17-pro-max-plata-5.jpg')">Comprar</button>
+                </div>
+            </div>
+
+            <div class="tarjeta-tienda" onclick="verDetalle('iPhone 17', '1,115.00', 'https://img-prd-pim.poorvika.com/product/Apple-iphone-17-black-512gb-Front-Back-Side-View.png')">
+                <div class="bloque-blanco-img">
+                    <img src="https://img-prd-pim.poorvika.com/product/Apple-iphone-17-black-512gb-Front-Back-Side-View.png" alt="iPhone 17" class="imagen-telefono">
+                </div>
+                <div class="bloque-info-negro">
+                    <span class="sub-categoria">APPLE, IPHONE</span>
+                    <h3 class="nombre-producto">iPhone 17</h3>
+                    <p class="precio-producto">$1,115.00</p>
+                    <button class="btn-comprar-azul" onclick="agregarAlCarrito(event, 'iPhone 17', 1115.00, 'https://img-prd-pim.poorvika.com/product/Apple-iphone-17-black-512gb-Front-Back-Side-View.png')">Comprar</button>
+                </div>
+            </div>
+
+            <div class="tarjeta-tienda" onclick="verDetalle('iPhone 16 Pro Max', '1,170.00', 'https://storage.comprasmartphone.com/smartphones/apple-iphone-16-pro-max.png')">
+                <div class="bloque-blanco-img">
+                    <img src="https://storage.comprasmartphone.com/smartphones/apple-iphone-16-pro-max.png" alt="iPhone 16 Pro Max" class="imagen-telefono">
+                </div>
+                <div class="bloque-info-negro">
+                    <span class="sub-categoria">APPLE, IPHONE</span>
+                    <h3 class="nombre-producto">iPhone 16 Pro Max</h3>
+                    <p class="precio-producto">$1,170.00</p>
+                    <button class="btn-comprar-azul" onclick="agregarAlCarrito(event, 'iPhone 16 Pro Max', 1170.00, 'https://storage.comprasmartphone.com/smartphones/apple-iphone-16-pro-max.png')">Comprar</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <section class="seccion-detalle-producto" id="vista-detalle">
+        <div class="contenedor-detalle-blanco">
+            
+            <div class="columna-izquierda-imagen">
+                <p class="meta-unidades">● Más de 331 unidades vendidas este mes</p>
+                <p class="meta-stock">● Stock limitado</p>
+                <img id="detalle-img" src="https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/iphone-17-pro-17-pro-max-hero.png" alt="Imagen Detalle" class="imagen-detalle-dinamica">
+            </div>
+
+            <div class="columna-derecha-info">
+                <h2 class="detalle-titulo">Elige tu favorito.</h2>
+                <h3 id="detalle-nombre-sub">iPhone 17 Pro Max</h3>
+                <p class="detalle-precio" id="detalle-precio">$1,731.00</p>
+                
+                <div class="selector-colores-caja">
+                    <p>Elige tu color favorito.</p>
+                    <div class="grupo-circulos">
+                        <span class="circulo color-gris"></span>
+                        <span class="circulo color-oro"></span>
+                        <span class="circulo color-azul"></span>
+                    </div>
+                </div>
+
+                <div class="info-garantia-seguridad">
+                    <div class="item-seguridad">
+                        <strong>🔒 Compra Segura</strong>
+                        <p>Tus compras están protegidas con los mejores estándares de seguridad.</p>
+                    </div>
+                    <div class="item-seguridad">
+                        <strong>✔️ Únicos con garantía de 2 años</strong>
+                        <p>Tus compras cuentan con garantía de 2 años</p>
+                    </div>
+                </div>
+
+                <button class="btn-comprar-azul" id="btn-agregar-detalle">Añadir al Carrito</button>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="carrito-overlay" id="carrito-menu">
+        <div class="carrito-panel">
+            <div class="carrito-cabecera">
+                <h2>Tu Orden</h2>
+                <span class="cerrar-carrito" id="cerrar-carrito">&times;</span>
+            </div>
+            <div id="items-carrito-lista" class="lista-items-scroll">
+                <p style="color: #666; text-align: center; margin-top: 2rem;">Tu carrito está vacío.</p>
+            </div>
+            <div class="total-caja">
+                <div class="fila-total">
+                    <span>Total:</span>
+                    <strong>$<span id="precio-total-cuenta">0.00</span></strong>
+                </div>
+                <button class="btn-vaciar-todo" id="vaciar-orden-btn">Vaciar Todo</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="pie-pagina-firma">
+        HERRERA DANILO - DESARROLLO DE SOWFTWARE
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

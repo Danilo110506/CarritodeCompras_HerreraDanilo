@@ -1,0 +1,284 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+    background-color: #171719;
+    color: #ffffff;
+    padding-bottom: 60px;
+}
+
+.barra-navegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 2rem;
+    background-color: #000000;
+    border-bottom: 1px solid #2c2c2e;
+}
+
+.logo-tienda {
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.carrito-icono {
+    cursor: pointer;
+    background: #1c1c1e;
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    border: 1px solid #2c2c2e;
+}
+
+.seccion-catalogo {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+.ruta-texto {
+    color: #86868b;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.grid-productos-oficial {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.tarjeta-tienda {
+    background-color: #171719;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.bloque-blanco-img {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 280px;
+    border-radius: 20px;
+    margin-bottom: 0.8rem;
+}
+
+.imagen-telefono {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.bloque-info-negro {
+    padding: 0.5rem 0.2rem;
+    text-align: left;
+}
+
+.sub-categoria {
+    color: #86868b;
+    font-size: 0.75rem;
+    display: block;
+    margin-bottom: 0.2rem;
+}
+
+.nombre-producto {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    color: #ffffff;
+}
+
+.precio-producto {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.btn-comprar-azul {
+    background-color: #2f80ed;
+    color: #ffffff;
+    border: none;
+    padding: 0.8rem;
+    width: 100%;
+    border-radius: 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-comprar-azul:hover {
+    background-color: #1b66ca;
+}
+
+.seccion-detalle-producto {
+    background-color: #ffffff;
+    color: #1d1d1f;
+    margin-top: 5rem;
+    padding: 4rem 2rem;
+}
+
+.contenedor-detalle-blanco {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.columna-izquierda-imagen {
+    flex: 1;
+    min-width: 300px;
+}
+
+.meta-unidades, .meta-stock {
+    color: #86868b;
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+}
+
+.meta-stock {
+    margin-bottom: 2rem;
+}
+
+.imagen-detalle-dinamica {
+    width: 100%;
+    max-width: 380px;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+.columna-derecha-info {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.detalle-titulo {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+#detalle-nombre-sub {
+    font-size: 1.4rem;
+    color: #1d1d1f;
+    margin-bottom: 1.5rem;
+}
+
+.detalle-precio {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.selector-colores-caja {
+    background-color: #f5f5f7;
+    padding: 1rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
+
+.selector-colores-caja p {
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+}
+
+.grupo-circulos {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.circulo {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.color-gris { background-color: #d1d1d6; }
+.color-oro { background-color: #e3a857; }
+.color-azul { background-color: #1d4ed8; }
+
+.info-garantia-seguridad {
+    margin-bottom: 2rem;
+}
+
+.item-seguridad {
+    margin-bottom: 1.2rem;
+    font-size: 0.95rem;
+}
+
+.item-seguridad p {
+    color: #86868b;
+    margin-top: 0.2rem;
+}
+
+.carrito-overlay {
+    position: fixed;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background: rgba(0,0,0,0.7);
+    display: none;
+    justify-content: flex-end;
+    z-index: 1000;
+}
+
+.carrito-panel {
+    background: #ffffff;
+    color: #1d1d1f;
+    width: 100%;
+    max-width: 360px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cerrar-carrito {
+    float: right;
+    cursor: pointer;
+    font-size: 1.4rem;
+}
+
+.total-caja {
+    border-top: 1px solid #e5e5ea;
+    padding-top: 1.5rem;
+}
+
+.btn-vaciar-todo {
+    background: #ff3b30;
+    color: white;
+    border: none;
+    padding: 0.7rem;
+    width: 100%;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.pie-pagina-firma {
+    background-color: #000000;
+    color: #86868b;
+    text-align: center;
+    padding: 1.8rem 1rem;
+    font-size: 0.85rem;
+    border-top: 1px solid #2c2c2e;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
